@@ -1,0 +1,8 @@
+
+gunicorn
+uvicorn[standard]
+bs4
+requests
+urllib3
+fastapi
+aiohttp

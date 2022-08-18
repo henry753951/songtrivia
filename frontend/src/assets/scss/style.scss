@@ -1,0 +1,238 @@
+* {
+    scrollbar-width: 0;
+}
+
+*::-webkit-scrollbar {
+    background-color: transparent;
+    width: 5px;
+}
+
+*::-webkit-scrollbar-thumb {
+    border-radius: 99px;
+    background-color: #ddd;
+}
+
+.chat-box {
+    border-radius: 15px;
+    min-height: 100px;
+    height: 200px;
+    background-color: rgba(70, 70, 70, 0.267);
+}
+
+.bottom-bar {
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    background-color: #3987e0c4;
+    backdrop-filter: blur(15px);
+}
+
+.speech-bubble {
+    z-index: 100;
+    position: relative;
+    background: rgb(255, 255, 255);
+    border-radius: 10px;
+}
+
+.speech-bubble:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 0;
+    height: 0;
+    border: 15px solid transparent;
+    border-right-color: rgb(255, 255, 255);
+    border-left: 0;
+    border-bottom: 0;
+    margin-top: -10px;
+    margin-left: -15px;
+}
+
+.item-link {
+    all: unset;
+    cursor: pointer;
+}
+
+@keyframes playerWrongAnimation {
+    0% {
+        background-color: rgb(255, 255, 255);
+    }
+    5% {
+        background-color: rgba(255, 0, 0, 0.219);
+    }
+    100% {
+        background-color: rgba(255, 255, 255, 255);
+    }
+}
+
+@keyframes playerCorrectAnimation {
+    0% {
+        background-color: rgba(255, 255, 255, 0);
+    }
+    5% {
+        background-color: rgba(47, 255, 127, 0.247);
+    }
+    100% {
+        background-color: rgba(255, 255, 255, 255);
+    }
+}
+
+.va-modal__dialog {
+    overflow-x: hidden;
+}
+
+.player.wrong {
+    animation: playerWrongAnimation 3s;
+}
+
+.player.correct {
+    animation: playerCorrectAnimation 3s;
+}
+
+.name-input {
+    width: 100%;
+    padding: 0.3rem 0.8rem 0.3rem 0.8rem;
+    border-radius: 25px;
+    border: none;
+}
+
+.chat-input {
+    height: 100%;
+    max-width: 300px;
+    width: 60%;
+    padding: 0.3rem 0.8rem 0.3rem 0.8rem;
+    border-radius: 25px;
+    border: none;
+}
+
+.chat-input:focus {
+    outline: none;
+}
+
+.name-input:focus {
+    outline: none;
+}
+
+.nav-bar {}
+
+.circle-btn {
+    border-radius: 25px;
+}
+
+.close-btn {
+    display: none !important;
+}
+
+.player-list-sm {
+    display: none;
+}
+
+.player-list-switch {
+    display: none!important;
+}
+
+.np-card {
+    border-radius: 25px;
+    background: rgba(255, 255, 255, 0.8);
+}
+
+.player-list-group {
+    height: calc(100% - 2rem)
+}
+
+.player-list {
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(1px);
+    border-radius: 25px;
+}
+
+@media (max-width: 767.8px) {
+    .sm-nav-w-100 {
+        width: 100%!important;
+    }
+    .player-list-switch {
+        display: block!important;
+    }
+    .player-list-box {
+        position: fixed;
+        z-index: 99;
+    }
+    .player-list-box.active {
+        display: none;
+    }
+    .player-list-sm {
+        display: block;
+    }
+    .close-btn {
+        color: rgb(174, 173, 179);
+        display: flex!important;
+        position: absolute;
+        top: 0;
+        right: 0;
+        margin-right: 13px;
+        margin-top: 9px;
+        z-index: 99;
+        border-radius: 50%;
+        background: rgb(241, 241, 242);
+        width: 25px;
+        height: 25px;
+    }
+}
+
+.player-list {
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(1px);
+    border-radius: 10px;
+}
+
+.song-list-box {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(1px);
+    border-radius: 10px;
+}
+
+.song-card:hover {
+    background: rgb(240, 240, 240)
+}
+
+.song-list-group {
+    height: calc(100% - 2rem)
+}
+
+.song-list li {
+    list-style-type: none;
+}
+
+.game-body {
+    height: calc(100% - 6rem);
+}
+
+@media (max-width: 1200px) {
+    .sm-nav-w-100 {
+        width: 100%!important;
+    }
+    .song-list-switch {
+        display: block!important;
+    }
+    .song-list-box {
+        position: fixed;
+        z-index: 99;
+    }
+    .song-list-box.active {
+        display: none;
+    }
+    .song-list-sm {
+        display: block;
+    }
+}
+
+@media (max-width: 766px) {
+    .no-540 {
+        max-width: none !important;
+    }
+}
