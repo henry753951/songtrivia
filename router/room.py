@@ -217,7 +217,7 @@ async def gameStart(room_id):
     room_.current_time=0
     room_.current_song_selections=[]
     room_.current_song=None
-    room_.picklist = room_.songs
+    room_.picklist = room_.songs.copy()
     room_.isStart=True
     while True:
         if room_.current_round != 0:
@@ -236,17 +236,14 @@ async def gameStart(room_id):
 
         try:
             room_.current_song=random.choice(room_.picklist)
-            for song in room_.picklist:
-                if song["id"]==room_.current_song["id"]:
-                    room_.picklist.remove(song)
-                    break
-            for song in room_.songs:
-                if song["id"]==room_.current_song["id"]:
-                    room_.songs.remove(song)
-                    break
+
+            room_.picklist.remove(room_.current_song)
+
+            room_.songs.remove(room_.current_song)
             t=random.sample(room_.songs,room_.song_selections_count-1)
+
             room_.songs.append(room_.current_song)
-            room_.current_song_selections=t
+            room_.current_song_selections=t.copy()
             
         except Exception as e:
             print(e)
