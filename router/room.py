@@ -236,7 +236,10 @@ async def gameStart(room_id):
 
         try:
             room_.current_song=random.choice(room_.picklist)
-            room_.picklist.remove(room_.current_song)
+            for song in room_.picklist:
+                if song["id"]==room_.current_song["id"]:
+                    room_.picklist.remove(song)
+                    break
             for song in room_.songs:
                 if song["id"]==room_.current_song["id"]:
                     room_.songs.remove(song)
