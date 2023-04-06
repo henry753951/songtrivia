@@ -1,6 +1,6 @@
 # Eagle 猜歌遊戲
- * song trivia multiplayer
-遊戲網址 : [https://songtrivia.henry0725.tk](https://songtrivia.nukapp.tk)
+song trivia multiplayer. 
+  遊戲網址 : [https://songtrivia.henry0725.tk](https://songtrivia.nukapp.tk)
  * 多人同樂，房間系統
  * Apple Music 來源 (可匯入自己的歌單)
  * 簡易後端，無資料庫  
