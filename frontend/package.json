@@ -1,47 +1,47 @@
 {
-    "name": "frontend",
-    "version": "0.1.0",
-    "private": true,
-    "scripts": {
-        "serve": "vue-cli-service serve",
-        "build": "vue-cli-service build",
-        "lint": "vue-cli-service lint"
-    },
-    "dependencies": {
-        "core-js": "^3.6.5",
-        "moment": "^2.29.4",
-        "vue": "^3.0.0",
-        "vue-cryptojs": "^2.3.0",
-        "vue-number-animation": "^1.1.2",
-        "vue-router": "^4.0.0-0",
-        "vuestic-ui": "^1.4.9"
-    },
-    "devDependencies": {
-        "@vue/cli-plugin-babel": "~4.5.15",
-        "@vue/cli-plugin-eslint": "~4.5.15",
-        "@vue/cli-plugin-router": "~4.5.15",
-        "@vue/cli-service": "~4.5.15",
-        "@vue/compiler-sfc": "^3.0.0",
-        "babel-eslint": "^10.1.0",
-        "eslint": "^6.7.2",
-        "eslint-plugin-vue": "^7.0.0",
-        "sass": "^1.26.5",
-        "sass-loader": "^8.0.2"
-    },
-    "eslintConfig": {
-        "root": true,
-        "env": {
-            "node": true
-        },
-        "extends": [
-            "plugin:vue/essential",
-            "eslint:recommended"
-        ],
-        "parserOptions": {
-            "parser": "babel-eslint"
-        },
-        "rules": {
-            "no-unused-vars": "off"
-        }
-    }
+	"name": "frontend",
+	"version": "0.1.0",
+	"private": true,
+	"scripts": {
+		"serve": "vue-cli-service serve",
+		"build": "set NODE_OPTIONS=--openssl-legacy-provider && vue-cli-service build",
+		"lint": "vue-cli-service lint"
+	},
+	"dependencies": {
+		"core-js": "^3.6.5",
+		"moment": "^2.29.4",
+		"vue": "^3.0.0",
+		"vue-cryptojs": "^2.3.0",
+		"vue-number-animation": "^1.1.2",
+		"vue-router": "^4.0.0-0",
+		"vuestic-ui": "^1.4.9"
+	},
+	"devDependencies": {
+		"@vue/cli-plugin-babel": "~4.5.15",
+		"@vue/cli-plugin-eslint": "~4.5.15",
+		"@vue/cli-plugin-router": "~4.5.15",
+		"@vue/cli-service": "~4.5.15",
+		"@vue/compiler-sfc": "^3.0.0",
+		"babel-eslint": "^10.1.0",
+		"eslint": "^6.7.2",
+		"eslint-plugin-vue": "^7.0.0",
+		"sass": "^1.26.5",
+		"sass-loader": "^8.0.2"
+	},
+	"eslintConfig": {
+		"root": true,
+		"env": {
+			"node": true
+		},
+		"extends": [
+			"plugin:vue/essential",
+			"eslint:recommended"
+		],
+		"parserOptions": {
+			"parser": "babel-eslint"
+		},
+		"rules": {
+			"no-unused-vars": "off"
+		}
+	}
 }
